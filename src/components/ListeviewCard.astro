@@ -1,0 +1,53 @@
+---
+export interface CardProps {
+  image: string;
+  label: string;
+  title: string;
+  description: string;
+  price: string;
+  buttonText: string;
+  extralabel: string; // Optional prop for the additional label
+  discountlabel: string;
+}
+
+import Button from "../components/Button.astro";
+const { image, label, title, description, price, buttonText, extralabel, discountlabel } = Astro.props;
+---
+
+<div class="max-w-[400px] h-full bg-neutral-800 rounded-none h-xs col-span-4 transform hover:scale-[1.02] transition-all duration-300 ease-in-out">
+  <a href="/singleview">
+    <div class="image relative">
+      <img class="w-[400px] h-[400px] object-cover" src={image} alt={title} />
+      <div class="h-full absolute inset-0 bg-neutral-950 bg-opacity-35 z-[20]"></div>
+    </div>
+    <!-- Labels Container (relative positioning) -->
+    <div class="relative flex flex-col justify-center items-center z-[30]">
+      <!-- Label 1 -->
+      <span class="flex flex-row justify-evenly gap-3 items-center absolute bottom-4 right-0 text-neutral-950 bg-neutral-100 p-2 w-24">
+        {label}
+        <img src="/flaske_icon_red.svg" alt="bottle icon" width="12" height="12" />
+      </span>
+
+      <!-- Label 2 (Only on Card with Position 1) -->
+      {extralabel && <span class="font-semibold absolute left-0 p-2 text-center w-40 bg-red-600 text-neutral-50 -top-[25rem]">{extralabel}</span>}
+
+      <!-- Discount Label (Only on Card with Discount) -->
+      {
+        discountlabel && (
+          <span class="font-semibold absolute -top-[25rem] right-0 p-2 text-center w-40 bg-red-800 text-neutral-50">{discountlabel}</span>
+        )
+      }
+    </div>
+    <!-- Content -->
+    <div class="p-5">
+      <h3 class="mb-2 tracking-tight text-neutral-50">{title}</h3>
+      <p class="mb-8 font-normal text-neutral-50">{description}</p>
+      <h4 class="mb-8 text-neutral-50">{price}</h4>
+      <div class="flex justify-center">
+        <a href="/singleview">
+          <Button variant="primary" size="small">{buttonText}</Button>
+        </a>
+      </div>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,30 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+---
+
+<MainLayout title="Abonnementer">
+    <section class="max-w-7xl mx-auto md:p-0 p-8">
+        <section class="md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
+            <section class="grid md:grid-cols-12 gap-4">
+                <section class="bg-neutral-900 col-span-8 md:col-start-3">
+                    <section class="md:p-12 p-8 md:pb-desktop-bottom md:pt-desktop-top pb-mobil-bottom pt-mobil-top">
+                        <div class="grid place-items-center">
+                            <h1 class="md:text-h2-desktop text-h2-mobile font-display font-bold pb-5">Tak for din tilmeldning</h1>
+                            <p>Ordrebekræftelsen er sendt til din email</p>
+                        </div>
+                        <div class="flex justify-center pt-20">
+                            <a href="/">
+                                <Button variant="primary" size="small">Tilbage til forsiden</Button>
+                            </a>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <section class="pt-10 flex justify-center">
+                <hr class="border-t-2 border-red-800 w-28" />
+            </section>
+        </section>
+    </section>
+</MainLayout>

@@ -1,0 +1,98 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ListeviewCard from "../components/ListeviewCard.astro";
+
+const cards = [
+  {
+    position: 1,
+    image: "/red_card1.webp",
+    label: "6 stk",
+    extralabel: "Mest populær!",
+    title: "Rødvinskasse",
+    description: "Seks rødvine, der lader dig udforske forskellige druesorter og unikke vinområder.",
+    price: "699 DKK",
+    buttonText: "Læs mere",
+  },
+  {
+    image: "/white_card1.webp",
+    label: "6 stk",
+    title: "Hvidvinskasse",
+    description: "Tre nøje udvalgte hvidvine, der giver en balance af friskhed, dybde og finesse.",
+    price: "699 DKK",
+    buttonText: "Læs mere",
+  },
+  {
+    image: "/mixed_card1.webp",
+    label: "6 stk",
+    title: "Blandet kasse",
+    description: "En eksklusiv samling af rød- og hvidvine, der spænder fra kraftfulde til lette smagsnuancer.",
+    price: "699 DKK",
+    buttonText: "Læs mere",
+  },
+  {
+    image: "/red_card2.webp",
+    label: "3 stk",
+    title: "Rødvinskasse",
+    description: "Tre rødvine, der bringer smagen af verdens mest spændende vinregioner til dit glas.",
+    price: "349 DKK",
+    buttonText: "Læs mere",
+  },
+  {
+    image: "/white_card2.webp",
+    label: "3 stk",
+    title: "Hvidvinskasse",
+    description: "Tre hvidvine, der kombinerer sprødhed, raffinement og et strejf af kompleksitet.",
+    price: "349 DKK",
+    buttonText: "Læs mere",
+    discountlabel: "Mængderabat!", // Added discount label to the third card
+  },
+  {
+    image: "/mixed_card2.webp",
+    label: "3 stk",
+    title: "Blandet kasse",
+    description: "En kollektion af rød- og hvidvine, der tager dig fra intense til elegante smagsoplevelser.",
+    price: "349 DKK",
+    buttonText: "Læs mere",
+  },
+];
+---
+
+<MainLayout title="Vinkasser">
+  <div class="relative flex justify-center items-center">
+    <img
+      src="/hero_listview.webp"
+      alt="Image of four glasses containing red, white and rose wine, with bread and cheese on the table"
+      class="w-full h-[500px] object-cover"
+    />
+    <!-- Dark overlay -->
+    <div class="h-full absolute inset-0 bg-neutral-950 bg-opacity-35 z-[20]"></div>
+  </div>
+  <div
+    class="absolute px-[20px] md:pl-2xl top-[clamp(40vh, 50vh, 60vh)] md:left-[21%] left-[45%] w-[fit-content] transform -translate-x-1/2 -translate-y-1/2 z-[30] overflow-hidden"
+  >
+    <h1 class="display text-neutral-50 w-[fit-content]">VINKASSER</h1>
+  </div>
+
+  <section class="max-w-7xl mx-auto md:p-0 p-8">
+    <section
+      class="flex flex-col justify-center items-center md:grid md:grid-cols-12 gap-gap pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top"
+    >
+      {/* Map over the cards */}
+      {
+        cards.map((card) => (
+          <ListeviewCard
+            key={card.position}
+            image={card.image}
+            label={card.label}
+            extralabel={card.position === 1 ? card.extralabel : null}
+            discountlabel={card.discountlabel}
+            title={card.title}
+            description={card.description}
+            price={card.price}
+            buttonText={card.buttonText}
+          />
+        ))
+      }
+    </section>
+  </section>
+</MainLayout>
