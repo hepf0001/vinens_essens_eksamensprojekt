@@ -2,15 +2,19 @@
 import Button from "../components/Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="p-4 fixed w-full pt-8 md:pb-4 bg-neutral-950 md:bg-transparent bg-opacity-70 backdrop-blur-sm z-[50]">
+<div x-data="{ showmenu: false }" class="p-2 fixed w-full bg-neutral-950 md:bg-transparent bg-opacity-70 backdrop-blur-sm z-[50]">
   <div id="navbar" class="flex flex-row justify-between">
     <nav id="desktopmenu" class="hidden lg:block w-full">
       <div class="max-w-4xl mx-auto">
-        <ul class="flex flex-row justify-between gap-4 w-full">
-          <li class="text-center pt-2"><a class="text-neutral-50" href="/">Hjem</a></li>
-          <li class="text-center pt-2"><a class="text-neutral-50" href="/om">Om os</a></li>
-          <li class="text-center pt-2"><a class="text-neutral-50" href="/"><img src="/Logo_hvid.svg" alt="Logo for Vinens Essens" /></a></li>
-          <li class="text-center pt-2"><a class="text-neutral-50" href="/listeview">Vinkasser</a></li>
+        <ul class="flex flex-row justify-between items-center gap-4 w-full">
+          <li class="some1 text-center"><a class="text-neutral-50 py-2" href="/">Hjem</a></li>
+          <li class="some1 text-center"><a class="text-neutral-50 py-2" href="/om">Om os</a></li>
+          <li class="some1 text-center">
+            <a class="text-neutral-50 flex items-center justify-center" href="/">
+              <img src="/Logo_hvid.svg" alt="Logo for Vinens Essens" class="w-32 relative z-10" />
+            </a>
+          </li>
+          <li class="some1 text-center"><a class="text-neutral-50 py-2" href="/listeview">Vinkasser</a></li>
           <li>
             <a href="/formular_vinkasse"><Button variant="primary" size="small">Bestil abonnement</Button></a>
           </li>
@@ -52,7 +56,7 @@ import Button from "../components/Button.astro";
     x-on:click="showmenu = false"
     x-on:click.outside="showmenu = false"
   >
-    <ul class="space-y-2">
+    <ul class="space-y-2 some1">
       <!-- Adjust width for the whole menu -->
       <li class="text-right border-b-2 border-neutral-50 py-6">
         <a class="text-neutral-50" href="/">Hjem</a>
@@ -72,7 +76,7 @@ import Button from "../components/Button.astro";
   </nav>
 </div>
 
-<!-- <style>
+<style>
   /*Link-hover effect*/
   .some1 a {
     position: relative;
@@ -97,4 +101,4 @@ import Button from "../components/Button.astro";
     transform-origin: left;
     transform: scaleX(1);
   }
-</style> -->
+</style>
