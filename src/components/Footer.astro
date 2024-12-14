@@ -3,69 +3,58 @@
 ---
 
 <!-- Footer til mobil format -->
-<footer class="max-w-7xl mx-auto md:p-0 p-8">
-  <div>
-    <img src="" alt="">
-  </div>
-
-  <div>
-    <p>Edith rodesvej 67</p>
-  </div>
-
-  <div>
-    <p>CVR: 23452454</p>
-  </div>
-
-  <div>
-    <p>email@business.dk</p>
-  </div>
-
-  <div>
-    <p>Tlf: 46 75 21 34</p>
-  </div>
-
-  <div>
-    <h2>Handel og politik</h2>
-  </div>
-
-  <div>
-    <p>Handel- og persondata</p>
-  </div>
-
-  <div>
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-  </div>
-
-  <div>
-    <h2>Nyhedsbrev</h2>
-  </div>
-
-  <div>
-    <p>Tilmeld dig på vores nyhedsbrev og få 10% rabat</p>
-  </div>
-
-  <div>
-    <h4>Email</h4>
-  </div>
-
-  <div>
-    <input type="email">
-    <a href="#">Send</a>
-  </div>
-
-  <div>
-    <p>© Vinens Essens 2024</p>
-  </div>
-
-  <div>
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-  </div>
-
+<footer class="bg-red-950">
+  <section class="max-w-7xl mx-auto md:p-0 md:py-8 p-8">
+    <section class="grid md:grid-cols-3 gap-gap">
+      <div class="md:pb-o pb-mobil-bottom">
+        <img class="h-24 w-auto pb-2" src="/Logo_hvid.svg" alt="logo" />
+        <p class="pb-2">Guldbergsgade 29N</p>
+        <p class="pb-2">2200 København</p>
+        <p class="pb-2">CVR: 23452454</p>
+        <p class="pb-2">email@business.dk</p>
+        <p class="pb-2">Tlf: 46 75 21 34</p>
+      </div>
+      <div class="md:pb-o pb-mobil-bottom">
+        <div>
+          <h1 class="md:text-h4-desktop text-h4-mobile font-display font-regular">Handel og politik</h1>
+          <p class="underline pb-8">Handel- og persondata</p>
+        </div>
+        <div>
+          <h1 class="md:text-h4-desktop text-h4-mobile font-display font-regular pb-2">Følg vores sociale medier</h1>
+          <div class="flex justify-start gap-5">
+            <img class="" src="/in.svg" alt="Linkin" />
+            <img class="" src="/f.svg" alt="Facebook" />
+            <img class="" src="/ig.svg" alt="Instagram" />
+          </div>
+        </div>
+      </div>
+      <div class="md:pb-o pb-mobil-bottom">
+        <h1 class="md:text-h4-desktop text-h4-mobile font-display font-regular">Nyhedsbrev</h1>
+        <p class="pb-8">Tilmeld dig vores nyhedsbrev og få 10% rabat</p>
+        <p>Email</p>
+        <form action="#">
+          <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+            <div class="relative w-full">
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <svg class="w-5 h-5 text-neutral-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+              </div>
+              <input class="block p-3 pl-10 pr-3 w-full text-[1rem] text-neutral-400 bg-neutral-50 border-3 border-neutral-50 placeholder-neutral-400" placeholder="Email adresse" type="email" id="email" required="" />
+              <div class="absolute inset-y-0 right-0 flex items-center justify-end">
+                <button type="submit" class="py-3 px-5 text-center cursor-pointer -ml-px bg-red-950 font-semibold border-3 border-neutral-50 hover:bg-red-900 hover:border-red-900 text-neutral-50 text-[1rem]">SEND</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="flex md:justify-center justify-start gap-5 flex-wrap">
+      <p>© Vinens Essens 2024</p>
+      <div class="flex justify-start gap-3">
+        <img class="h-6 w-auto" src="/dk.webp" alt="dk" />
+        <img class="h-6 w-auto" src="/visa.webp" alt="visa" />
+        <img class="h-6 w-auto" src="/mastercard.webp" alt="mastercard" />
+        <img class="h-6 w-auto" src="/mobilpay.webp" alt="mobilepay" />
+      </div>
+    </section>
+  </section>
 </footer>
-
-
