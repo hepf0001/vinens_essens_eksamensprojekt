@@ -79,25 +79,27 @@ import MainLayout from "../layouts/MainLayout.astro";
     </section>
 
     <!-- Eksklusive vine Section -->
-    <div class="col-span-12 md:col-span-8 flex flex-col items-center bg-neutral-800 p-6">
-      <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
+    <section class="col-span-10 py-6 px-6 md:px-8 flex justify-center items-center">
+      <!-- Wrapper for content -->
+      <div class="relative flex items-center flex-col md:flex-row">
         <!-- Image Section -->
-        <div class="flex-shrink-0">
-          <img class="max-w-[130px] max-h-[303px]" src="/twowinebottles.webp" alt="Two wine bottles" />
+        <div class="z-10 flex-shrink-0">
+          <img class="max-w-[200px] drop-shadow-xl" src="/twowinebottles.webp" alt="Two wine bottles" />
         </div>
-        <!-- Content Section -->
-        <div class="flex flex-col items-center md:items-start text-center md:text-left">
-          <h2 class="text-h2-mobile font-display font-regular mt-6">Eksklusive vine</h2>
-          <p class="text-p-mobile mt-4 mb-6">
+
+        <!-- Text Section -->
+        <div class="bg-red-800 text-white py-12 px-20 clip-path-custom">
+          <h2>Eksklusive vine</h2>
+          <p class="mt-4 leading-relaxed">
             Vinens Essens tilbyder nøje udvalgte vine, der kombinerer høj kvalitet og unikke smagsoplevelser. Flere af vores vine findes kun i
             udvalgte restauranter eller er anbefalet af vores loyale kunder – perfekt til at gøre enhver anledning ekstraordinær.
           </p>
-          <a href="/formular_vinkasse">
-            <Button variant="secondary" size="small">Bestil abonnement</Button>
+          <a href="/formular_vinkasse" class="inline-block mt-6">
+            <Button variant="primary" size="small">Bestil abonnement</Button>
           </a>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Anmeldelser Section -->
     <section class="col-span-12 py-12">
@@ -120,3 +122,9 @@ import MainLayout from "../layouts/MainLayout.astro";
     </section>
   </section>
 </MainLayout>
+
+<style>
+  .clip-path-custom {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+  }
+</style>
