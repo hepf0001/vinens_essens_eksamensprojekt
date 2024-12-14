@@ -78,31 +78,11 @@ import Link from "../components/Link.astro";
                                         <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-5 h-5 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none" />
                                     </div>
                                 </div>
-                                <div class="col-span-3 col-start-2 content-center">
+                                <div class="md:col-span-3 col-span-5 col-start-2 content-center">
                                     <p class="text-neutral-950 font-bold">VISA-dankort, VISA, MasterCard, Eurocard</p>
                                     <p class="text-neutral-950">Kortgebyr: gratis</p>
                                 </div>
-                                <div class="content-center md:col-span-1 col-span-3 md:col-start-5 col-start-2 pt-5">
-                                    <img class="" src="/postnord.svg" alt="postnord logo" />
-                                </div>
-                            </section>
-                            <section class="flex justify-center">
-                                <hr class="border-t-2 border-red-800 w-[80%]" />
-                            </section>
-
-                            <!------ Sektion 2 ------>
-                            <section class="p-8 grid grid-cols-6 gap-gap">
-                                <div class="col-span-1 col-start-1 content-center pr-5">
-                                    <div class="flex items-center mb-4">
-                                        <input id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                                        <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
-                                    </div>
-                                </div>
-                                <div class="col-span-3 col-start-2 content-center">
-                                    <p class="text-neutral-950 font-bold">MobilePay</p>
-                                    <p class="text-neutral-950">Kræver MobilePay app</p>
-                                </div>
-                                <div class="col-span-2">
+                                <div class="md:col-span-2 col-span-4 md:col-start-5 col-start-2">
                                     <div class="grid grid-cols-3 gap-2 pt-5">
                                         <div class="content-center">
                                             <img class="" src="/dk.webp" alt="dk" />
@@ -118,6 +98,26 @@ import Link from "../components/Link.astro";
                             </section>
                             <section class="flex justify-center">
                                 <hr class="border-t-2 border-red-800 w-[80%]" />
+                            </section>
+
+                            <!------ Sektion 2 ------>
+                            <section class="p-8 grid grid-cols-6 gap-gap">
+                                <div class="col-span-1 col-start-1 content-center pr-5">
+                                    <div class="flex items-center">
+                                        <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-5 h-5 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none" />
+                                    </div>
+                                </div>
+                                <div class="md:col-span-3 col-span-5 col-start-2 content-center">
+                                    <p class="text-neutral-950 font-bold">MobilePay</p>
+                                    <p class="text-neutral-950">Kræver MobilePay app</p>
+                                </div>
+                                <div class="md:col-span-2 col-span-4 md:col-start-5 col-start-2">
+                                    <div class="grid grid-cols-3 gap-2 pt-5">
+                                        <div class="content-center">
+                                            <img class="" src="/mobilpay.webp" alt="Mobilepay" />
+                                        </div>
+                                    </div>
+                                </div>
                             </section>
                         </section>
                         <div class="flex justify-center pt-10">
