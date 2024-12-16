@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Infografik from "../components/Infografik.astro";
 ---
 
 <MainLayout title="Blandet vinkasse">
@@ -34,39 +35,7 @@ import Link from "../components/Link.astro";
         </section>
 
         <!------------------------------ Infografik ------------------------------>
-        <section class="grid md:grid-cols-12 gap-gap md:pb-desktop-bottom pb-mobil-bottom">
-            <section class="col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
-                <img class="md:h-40 h-32 mb-4" src="/vaelg_red.svg" alt="En computermus der vælger vinkasse" />
-                <div>
-                    <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold">1. Vælg din pakke</h1>
-                    <p>Find den pakke, der passer bedst til dig, og glæd dig til spændende vinoplevelser hver måned.</p>
-                </div>
-            </section>
-
-            <section class="col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
-                <img class="md:h-40 h-32 mb-4" src="/udvaelger_red.svg" alt="En hånd der vælger vin" />
-                <div>
-                    <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold">2. Vi udvælger vinen</h1>
-                    <p>Hver måned håndplukker vi 3-6 vine af høj kvalitet, så du kan opleve nye smagsoplevelser.</p>
-                </div>
-            </section>
-
-            <section class="col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
-                <img class="md:h-40 h-32 mb-4" src="/levering_red.svg" alt="En varervong der levere" />
-                <div>
-                    <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold">3. Gratis levering</h1>
-                    <p>Alle vores abonnenter får altid gratis levering – nemt og bekvemt.</p>
-                </div>
-            </section>
-
-            <section class="col-span-3 flex flex-col items-center text-center">
-                <img class="md:h-40 h-32 mb-4" src="/nyd_red.svg" alt="To vinglas der skåler" />
-                <div>
-                    <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold">4. Nyd din vin</h1>
-                    <p>Skænk op, læn dig tilbage, og nyd de unikke smagsnuancer i hver flaske.</p>
-                </div>
-            </section>
-        </section>
+        <Infografik />
 
         <!------------------------------ Tidligere vinkasse ------------------------------>
         <section class="grid md:grid-cols-12 gap-gap md:pb-10 pb-5">
