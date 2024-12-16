@@ -20,17 +20,17 @@ import Link from "../components/Link.astro";
                     <section class="md:p-12 p-8">
                         <!------------------------------ Kunde og leverings oplysninger ------------------------------>
                         <section class="flex">
-                            <a class="pr-5" href="/formular_mitid"><img src="/tilbage.svg" alt="Tilbageknap" /></a>
+                            <a class="pr-5" href="/formular_mitid"><img class="h-6" src="/tilbage.svg" alt="Tilbageknap" /></a>
                             <div>
-                                <h1 class="md:text-h2-desktop text-h2-mobile font-display font-regular pb-10">Kunde og leverings oplysninger</h1>
+                                <h1 class="md:text-h3-desktop text-h3-mobile font-display font-bold pb-10">Kunde og leverings oplysninger</h1>
                             </div>
                         </section>
                         <section class="md:pb-desktop-bottom pb-mobil-bottom">
                             <section class="bg-neutral-50">
                                 <!------ Sektion 1 ------>
                                 <section class="p-8">
-                                    <p class="text-neutral-950">Forventet levering d. 15/1 2025</p>
-                                    <p class="text-neutral-950">Leveres til pakkeboks (Gratis)</p>
+                                    <p class="text-neutral-950 font-regular">Forventet levering d. 15/1 2025</p>
+                                    <p class="text-neutral-950 font-regular">Leveres til pakkeboks (Gratis)</p>
                                 </section>
                                 <section class="flex justify-center">
                                     <hr class="border-t-2 border-red-800 w-[80%]" />
@@ -39,13 +39,13 @@ import Link from "../components/Link.astro";
                                 <section class="p-8 grid md:grid-cols-2">
                                     <div>
                                         <p class="text-neutral-950 font-bold">Leveringsadresse</p>
-                                        <p class="text-neutral-950">Fulde navn</p>
-                                        <p class="text-neutral-950">Guldbergsgade 29N</p>
-                                        <p class="text-neutral-950">2200 København</p>
-                                        <p class="text-neutral-950">kea@kea.dk</p>
+                                        <p class="text-neutral-950 font-regular">Fulde navn</p>
+                                        <p class="text-neutral-950 font-regular">Guldbergsgade 29N</p>
+                                        <p class="text-neutral-950 font-regular">2200 København</p>
+                                        <p class="text-neutral-950 font-regular">kea@kea.dk</p>
                                     </div>
-                                    <div class="md:place-items-end">
-                                        <p class="text-red-700 font-bold">Rediger</p>
+                                    <div class="flex justify-end">
+                                        <a class="text-red-700 font-bold" href="/formular_oplysninger">Rediger</a>
                                     </div>
                                 </section>
                                 <section class="flex justify-center">
@@ -55,32 +55,32 @@ import Link from "../components/Link.astro";
                                 <section class="p-8 grid md:grid-cols-2">
                                     <div>
                                         <p class="text-neutral-950 font-bold">Faktueringsadresse</p>
-                                        <p class="text-neutral-950">Fulde navn</p>
-                                        <p class="text-neutral-950">Guldbergsgade 29N</p>
-                                        <p class="text-neutral-950">2200 København</p>
-                                        <p class="text-neutral-950">kea@kea.dk</p>
+                                        <p class="text-neutral-950 font-regular">Fulde navn</p>
+                                        <p class="text-neutral-950 font-regular">Guldbergsgade 29N</p>
+                                        <p class="text-neutral-950 font-regular">2200 København</p>
+                                        <p class="text-neutral-950 font-regular">kea@kea.dk</p>
                                     </div>
-                                    <div class="md:place-items-end">
-                                        <p class="text-red-700 font-bold">Rediger</p>
+                                    <div class="flex justify-end">
+                                        <a class="text-red-700 font-bold" href="/formular_oplysninger">Rediger</a>
                                     </div>
                                 </section>
                             </section>
                         </section>
 
                         <!------------------------------ Betaling ------------------------------>
-                        <h1 class="md:text-h2-desktop text-h2-mobile font-display font-semibold pb-10">Betaling</h1>
+                        <h1 class="md:text-h3-desktop text-h3-mobile font-display font-bold pb-10">Betaling</h1>
 
                         <section class="bg-neutral-50">
                             <!------ Sektion 1 ------>
-                            <section class="border-red-800 border-2 p-8 grid grid-cols-6 gap-gap">
+                            <section class="has-[:checked]:border-red-800 has-[:checked]:border-2 p-8 grid grid-cols-6 gap-gap">
                                 <div class="col-span-1 col-start-1 content-center pr-5">
                                     <div class="flex items-center">
-                                        <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-5 h-5 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none" />
+                                        <input id="default-radio-1" checked="checked" type="radio" value="" name="default-radio" class="w-5 h-5 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none" />
                                     </div>
                                 </div>
                                 <div class="md:col-span-3 col-span-5 col-start-2 content-center">
                                     <p class="text-neutral-950 font-bold">VISA-dankort, VISA, MasterCard, Eurocard</p>
-                                    <p class="text-neutral-950">Kortgebyr: gratis</p>
+                                    <p class="text-neutral-950 font-regular">Kortgebyr: gratis</p>
                                 </div>
                                 <div class="md:col-span-2 col-span-4 md:col-start-5 col-start-2">
                                     <div class="grid grid-cols-3 gap-2 pt-5">
@@ -101,7 +101,7 @@ import Link from "../components/Link.astro";
                             </section>
 
                             <!------ Sektion 2 ------>
-                            <section class="p-8 grid grid-cols-6 gap-gap">
+                            <section class="has-[:checked]:border-red-800 has-[:checked]:border-2 p-8 grid grid-cols-6 gap-gap">
                                 <div class="col-span-1 col-start-1 content-center pr-5">
                                     <div class="flex items-center">
                                         <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-5 h-5 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none" />
@@ -109,7 +109,7 @@ import Link from "../components/Link.astro";
                                 </div>
                                 <div class="md:col-span-3 col-span-5 col-start-2 content-center">
                                     <p class="text-neutral-950 font-bold">MobilePay</p>
-                                    <p class="text-neutral-950">Kræver MobilePay app</p>
+                                    <p class="text-neutral-950 font-regular">Kræver MobilePay app</p>
                                 </div>
                                 <div class="md:col-span-2 col-span-4 md:col-start-5 col-start-2">
                                     <div class="grid grid-cols-3 gap-2 pt-5">
@@ -122,7 +122,7 @@ import Link from "../components/Link.astro";
                         </section>
                         <div class="flex items-baseline pt-5">
                             <input type="checkbox" id="checkbox" name="checkbox" value="checkbox" class="bg-neutral-5 border-0" />
-                            <label class="md:text-p-desktop text-p-mobile font-lato font-regular text-neutral-50 pl-2" for="checkbox">Bekræft vores handelsbetingelser*</label>
+                            <label class="md:text-p-desktop text-p-mobile font-lato font-light text-neutral-50 pl-2" for="checkbox">Bekræft vores <span class="underline">handelsbetingelser</span><span class="text-red-600">*</span></label>
                         </div>
                         <div class="flex justify-center pt-10">
                             <a href="/formular_tak">
