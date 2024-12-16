@@ -4,7 +4,7 @@
 
 @layer components {
   .display {
-    @apply font-display font-regular text-neutral-50 uppercase;
+    @apply font-display font-semibold text-neutral-50 uppercase;
     @apply text-display-mobile;
   }
 
@@ -15,7 +15,7 @@
   }
 
   h1 {
-    @apply font-display font-regular text-neutral-50;
+    @apply font-display font-semibold text-neutral-50;
     @apply text-h1-mobile;
   }
 
@@ -28,7 +28,7 @@
 
 
   h2 {
-    @apply font-display font-regular text-neutral-50;
+    @apply font-display font-semibold text-neutral-50;
     @apply text-h2-mobile;
   }
 
@@ -41,7 +41,7 @@
 
 
   h3 {
-    @apply font-display font-regular text-neutral-50;
+    @apply font-display font-bold text-neutral-50;
     @apply text-h3-mobile;
   }
 
@@ -54,7 +54,7 @@
 
 
   h4 {
-    @apply font-display font-regular text-neutral-50;
+    @apply font-display font-bold text-neutral-50;
     @apply text-h4-mobile;
   }
 
@@ -67,7 +67,7 @@
 
 
   p {
-    @apply font-lato font-regular text-neutral-50;
+    @apply font-lato font-light text-neutral-50;
     @apply text-p-mobile;
   }
 
