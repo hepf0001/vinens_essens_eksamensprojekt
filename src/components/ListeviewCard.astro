@@ -7,14 +7,13 @@ export interface CardProps {
   price: string;
   buttonText: string;
   second_description: string; // Optional prop for the additional label
-  discountlabel: string;
 }
 
 import Button from "../components/Button.astro";
 const { image, label, title, description, price, buttonText, extralabel, second_description } = Astro.props;
 ---
 
-<div class="max-w-[400px] h-full bg-neutral-800 rounded-none h-xs col-span-4 transform hover:scale-[1.02] transition-all duration-300 ease-in-out">
+<div class="max-w-[400px] h-full bg-neutral-800 rounded-none h-xs col-span-4 transform transition-all duration-300 ease-in-out hover:scale-[1.02]">
   <a href="/singleview">
     <div class="image relative">
       <img class="w-[400px] h-[250px] object-cover" src={image} alt={title} />
