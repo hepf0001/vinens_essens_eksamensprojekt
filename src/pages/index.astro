@@ -7,30 +7,57 @@ import MainLayout from "../layouts/MainLayout.astro";
 <!-- Start-sektion -->
 <MainLayout title="Forside - Vinens Essens">
   <div>
-    <!-- Hero section til mobil format -->
-    <div class="flex justify-center items-center">
-      <div class="relative w-full h-full">
-        <img class="w-full h-screen object-cover" src="/forsidebillede.webp" alt="" />
-        <div class="h-full absolute inset-0 bg-neutral-950 bg-opacity-35 backdrop-blur-sm z-[20]"></div>
-        <div class="flex justify-center items-center absolute inset-x-0 top-[40%] z-[30]">
-          <h1 class="text-[150px] text-neutral-50 p-6 font-display font-regular">
-            VINENS <span class="px-16"></span> ESSENS
-          </h1>
-        </div>
-        <div class="flex justify-center inset-x-0 absolute bottom-[8%] z-[30]">
-          <a href="/formular_vinkasse">
-            <Button variant="secondary" size="small">Bestil abonnement</Button>
-          </a>
-        </div>
-        <img class="absolute top-[18%] left-1/2 transform -translate-x-1/2 rotate-[10deg] p-4 h-[450px] z-[30]" src="/wine-rotation.gif" alt="" />
+    <!-- Hero section for mobile format -->
+    <div class="relative w-full h-full">
+      <!-- Background Image -->
+      <img class="w-full h-screen object-cover" src="/forsidebillede.webp" alt="Hero background" />
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-neutral-950 bg-opacity-35 backdrop-blur-sm z-[20]"></div>
+
+      <!-- Main Heading -->
+      <div class="absolute inset-0 flex justify-center items-center z-[30]">
+        <h1 class="text-[150px] text-neutral-50 px-6 font-display text-center">
+          VINENS <span class="px-16"></span> ESSENS
+        </h1>
       </div>
+
+      <!-- CTA Button -->
+      <div class="absolute bottom-[15%] w-full flex justify-center z-[30]">
+        <a href="/formular_vinkasse">
+          <Button variant="secondary" size="small">Bestil abonnement</Button>
+        </a>
+      </div>
+
+      <!-- Scroll Down Icon -->
+      <div class="absolute bottom-[3%] w-full flex justify-center z-[30]">
+        <a href="#section1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="float size-12 text-neutral-50 hover:text-red-800 transition duration-300 ease-in-out"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Rotating Wine Image -->
+      <img
+        class="absolute top-[18%] left-1/2 transform -translate-x-1/2 rotate-[10deg] p-4 h-[450px] z-[30]"
+        src="/wine-rotation.gif"
+        alt="Rotating wine bottle"
+      />
     </div>
 
     <section
       class="flex flex-col justify-center items-center md:grid md:grid-cols-12 gap-gap pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top"
     >
       <!-- Første sektion -->
-      <section class="grid grid-cols-2 col-span-12 md:col-span-8 md:col-start-3 bg-neutral-800 max-w-7xl mx-auto md:p-0 p-8">
+      <section id="section1" class="grid grid-cols-2 col-span-12 md:col-span-8 md:col-start-3 bg-neutral-800 max-w-7xl mx-auto md:p-0 p-8">
         <img class="w-fit" src="/forsidebillede2.webp" alt="" />
         <div class="p-8">
           <h2 class="text-h2-mobile font-display font-regular">Tag på en vinoplevelse</h2>
@@ -50,7 +77,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         <div class="flex flex-col items-center text-center w-full md:w-[22%]">
           <img class="md:h-40 h-32 mb-4" src="/vaelg_red.svg" alt="En computermus der vælger vinkasse" />
           <div>
-            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-regular">1. Vælg din pakke</h1>
+            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold">1. Vælg din pakke</h1>
             <p>Find den pakke, der passer bedst til dig, og glæd dig til spændende vinoplevelser hver måned.</p>
           </div>
         </div>
@@ -59,7 +86,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         <div class="flex flex-col items-center text-center w-full md:w-[22%]">
           <img class="md:h-40 h-32 mb-4" src="/udvaelger_red.svg" alt="En hånd der vælger vin" />
           <div>
-            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-regular">2. Vi udvælger vinen</h1>
+            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold">2. Vi udvælger vinen</h1>
             <p>Hver måned håndplukker vi 3-6 vine af høj kvalitet, så du kan opleve nye smagsoplevelser.</p>
           </div>
         </div>
@@ -68,7 +95,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         <div class="flex flex-col items-center text-center w-full md:w-[22%]">
           <img class="md:h-40 h-32 mb-4" src="/levering_red.svg" alt="En varervogn der leverer" />
           <div>
-            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-regular">3. Gratis levering</h1>
+            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold">3. Gratis levering</h1>
             <p>Alle vores abonnenter får altid gratis levering – nemt og bekvemt.</p>
           </div>
         </div>
@@ -77,7 +104,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         <div class="flex flex-col items-center text-center w-full md:w-[22%]">
           <img class="md:h-40 h-32 mb-4" src="/nyd_red.svg" alt="To vinglas der skåler" />
           <div>
-            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-regular">4. Nyd din vin</h1>
+            <h1 class="md:text-h4-desktop text-h4-mobile font-display">4. Nyd din vin</h1>
             <p>Skænk op, læn dig tilbage, og nyd de unikke smagsnuancer i hver flaske.</p>
           </div>
         </div>
@@ -110,30 +137,30 @@ import MainLayout from "../layouts/MainLayout.astro";
       <section class="max-w-7xl mx-auto md:p-0 p-8 col-span-12 py-12 pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top">
         <h2 class="text-center text-h2-mobile font-display font-regular">ANMELDELSER</h2>
         <hr class="border-t-2 border-red-800 w-32 mx-auto mt-2" />
-        <div class="flex flex-row justify-center gap-12 pt-20">
+        <div class="flex md:flex-row flex-col justify-center gap-12 pt-20">
           <div class="text-center">
             <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.webp" alt="" />
             <h3 class="text-h2-mobile font-display font-regular mt-4">God vin</h3>
-            <p class="text-p-mobile">Fantastisk vin! Smagen er unik, og kvaliteten er altid i top.</p>
+            <p>Fantastisk vin! Smagen er unik, og kvaliteten er altid i top.</p>
             <p class="text-neutral-300 mt-4">- Lærke Berge</p>
           </div>
           <div class="text-center">
             <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.webp" alt="" />
             <h3 class="text-h2-mobile font-display font-regular mt-4">Kan anbefales</h3>
-            <p class="text-p-mobile">En fornøjelse hver gang. Perfekt til både hverdag og særlige anledninger.</p>
+            <p>En fornøjelse hver gang. Perfekt til både hverdag og særlige anledninger.</p>
             <p class="text-neutral-300 mt-4">- Mikkel Damsgaard</p>
           </div>
           <div class="text-center">
             <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.webp" alt="" />
             <h3 class="text-h2-mobile font-display font-regular mt-4">Vilde udvalg</h3>
-            <p class="text-p-mobile">Eksklusiv vin med en dybde, der gør enhver middag uforglemmelig.</p>
+            <p>Eksklusiv vin med en dybde, der gør enhver middag uforglemmelig.</p>
             <p class="text-neutral-300 mt-4">- Noah Carter</p>
           </div>
 
           <div class="text-center">
             <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.webp" alt="" />
             <h3 class="text-h2-mobile font-display font-regular mt-4">Professionelle</h3>
-            <p class="text-p-mobile">Service i verdensklasse&mdash; de gør alt for at sikre en god oplevelse.</p>
+            <p>Service i verdensklasse&mdash; de gør alt for at sikre en god oplevelse.</p>
             <p class="text-neutral-300 mt-4">- Natasja Daglemør</p>
           </div>
         </div>
@@ -144,6 +171,27 @@ import MainLayout from "../layouts/MainLayout.astro";
   <style>
     .clip-path-custom {
       clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+    }
+
+    /* Floating Animation */
+    @keyframes float {
+      0% {
+        transform: translatey(0);
+      }
+      50% {
+        transform: translatey(-10px);
+      }
+      100% {
+        transform: translatey(0);
+      }
+    }
+
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </MainLayout>
