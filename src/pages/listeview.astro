@@ -10,7 +10,8 @@ const cards = [
     extralabel: "Mest populær!",
     title: "Rødvinskasse",
     description: "Seks rødvine, der lader dig udforske forskellige druesorter og unikke vinområder.",
-    price: "699 DKK",
+    price: "699 DKK/mdr.",
+    second_description: "(Værdi af 1.500 DKK)",
     buttonText: "Læs mere",
   },
   {
@@ -18,7 +19,8 @@ const cards = [
     label: "6 stk",
     title: "Hvidvinskasse",
     description: "Tre nøje udvalgte hvidvine, der giver en balance af friskhed, dybde og finesse.",
-    price: "699 DKK",
+    price: "699 DKK/mdr.",
+    second_description: "(Værdi af 1.500 DKK)",
     buttonText: "Læs mere",
   },
   {
@@ -26,7 +28,8 @@ const cards = [
     label: "6 stk",
     title: "Blandet kasse",
     description: "En eksklusiv samling af rød- og hvidvine, der spænder fra kraftfulde til lette smagsnuancer.",
-    price: "699 DKK",
+    price: "699 DKK/mdr.",
+    second_description: "(Værdi af 1.500 DKK)",
     buttonText: "Læs mere",
   },
   {
@@ -34,7 +37,8 @@ const cards = [
     label: "3 stk",
     title: "Rødvinskasse",
     description: "Tre rødvine, der bringer smagen af verdens mest spændende vinregioner til dit glas.",
-    price: "349 DKK",
+    price: "349 DKK/mdr.",
+    second_description: "(Værdi af 900 DKK)",
     buttonText: "Læs mere",
   },
   {
@@ -42,16 +46,17 @@ const cards = [
     label: "3 stk",
     title: "Hvidvinskasse",
     description: "Tre hvidvine, der kombinerer sprødhed, raffinement og et strejf af kompleksitet.",
-    price: "349 DKK",
+    price: "349 DKK/mdr.",
+    second_description: "(Værdi af 900 DKK)",
     buttonText: "Læs mere",
-    discountlabel: "Mængderabat!", // Added discount label to the third card
   },
   {
     image: "/mixed_card2.webp",
     label: "3 stk",
     title: "Blandet kasse",
     description: "En kollektion af rød- og hvidvine, der tager dig fra intense til elegante smagsoplevelser.",
-    price: "349 DKK",
+    price: "349 DKK/mdr.",
+    second_description: "(Værdi af 900 DKK)",
     buttonText: "Læs mere",
   },
 ];
@@ -85,10 +90,10 @@ const cards = [
             image={card.image}
             label={card.label}
             extralabel={card.position === 1 ? card.extralabel : null}
-            discountlabel={card.discountlabel}
             title={card.title}
             description={card.description}
             price={card.price}
+            second_description={card.second_description}
             buttonText={card.buttonText}
           />
         ))
