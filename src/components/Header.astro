@@ -2,16 +2,20 @@
 import Button from "../components/Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="p-2 fixed w-full bg-neutral-950 md:bg-transparent bg-opacity-70 backdrop-blur-sm z-[50]">
+<div x-data="{ showmenu: false }" class="p-4 mx-auto fixed w-full bg-neutral-950 md:bg-transparent bg-opacity-70 backdrop-blur-sm z-[50]">
   <div id="navbar" class="flex flex-row justify-between">
     <nav id="desktopmenu" class="hidden lg:block w-full">
-      <div class="max-w-4xl mx-auto">
-        <ul class="flex flex-row justify-between items-center gap-4 w-full">
+      <div class="max-w-5xl mx-auto">
+        <ul class="flex flex-row justify-between items-center gap-4 w-full [&>li]:basis-1/5">
           <li class="some1 text-center"><a class="text-neutral-50 py-2" href="/">Hjem</a></li>
           <li class="some1 text-center"><a class="text-neutral-50 py-2" href="/om">Om os</a></li>
-          <li class="some1 text-center">
+          <li class="text-center">
             <a class="text-neutral-50 flex items-center justify-center" href="/">
-              <img src="/Logo_hvid.svg" alt="Logo for Vinens Essens" class="w-32 relative z-10" />
+              <img
+                src="/Logo_hvid.svg"
+                alt="Logo for Vinens Essens"
+                class="w-32 relative z-10 hover:-translate-y-1 hover:opacity-70 transition duration-300 ease-in-out"
+              />
             </a>
           </li>
           <li class="some1 text-center"><a class="text-neutral-50 py-2" href="/listeview">Vinkasser</a></li>
