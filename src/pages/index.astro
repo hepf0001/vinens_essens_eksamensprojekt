@@ -7,7 +7,7 @@ import Infografik from "../components/Infografik.astro";
 
 <!-- Start-sektion -->
 <MainLayout title="Forside - Vinens Essens">
-  <div>
+  <div class="main-section">
     <!-- Hero section for responsive design -->
     <div class="relative w-full h-full">
       <!-- Background Image -->
@@ -17,73 +17,72 @@ import Infografik from "../components/Infografik.astro";
       <div class="absolute inset-0 bg-neutral-950 bg-opacity-35 backdrop-blur-sm z-[20]"></div>
 
       <!-- Main Heading -->
-      <div class="absolute inset-0 flex justify-center items-center z-[30] -bottom-[30%] md:bottom-[10%] text-center">
-        <h1 class="text-[80px] sm:text-[100px] md:text-[120px] lg:text-[150px] text-neutral-50 px-4 md:px-6 font-display text-center leading-tight">
+      <div class="absolute inset-0 flex justify-center items-center z-[30] -bottom-[10%] md:bottom-[20%] text-center">
+        <h1 class="text-[60px] md:text-[120px] text-neutral-50 px-4 md:px-6 font-display text-center leading-tight">
           VINENS <span class="block sm:inline px-4 md:px-16"></span> ESSENS
         </h1>
       </div>
 
       <!-- CTA Button -->
-      <div class="absolute bottom-[12%] sm:bottom-[12%] md:bottom-[15%] w-full flex justify-center z-[30]">
+      <div class="absolute bottom-[10%] sm:bottom-[12%] md:bottom-[10%] w-full flex justify-center z-[30]">
         <a href="/formular_vinkasse">
           <Button variant="secondary" size="small">Bestil abonnement</Button>
         </a>
       </div>
-
-      <!-- Scroll Down Icon -->
-      <div class="absolute bottom-[3%] w-full flex justify-center z-[30]">
-        <a href="#section1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="float w-8 h-8 sm:w-10 sm:h-10 text-neutral-50 hover:text-red-800 transition duration-300 ease-in-out"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
-          </svg>
-        </a>
+      <div class="absolute bottom-[18%] md:bottom-[20%] w-full flex justify-center z-[30]">
+        <p class="text-[16px] sm:text-[20px] font-regular text-neutral-50 text-center w-3/4 md:w-1/2">
+          Oplev vinens verden på en ny måde med et nøje udvalgt vinabonnement. Hver måned modtager du håndplukkede flasker, der byder på kvalitet,
+          variation og spændende historier&mdash; leveret direkte til din dør. Perfekt til dig, der ønsker at udforske og nyde vin uden besværet.
+        </p>
       </div>
-
       <!-- Rotating Wine Image -->
       <img
-        class="absolute md:top-[18%] top-[15%] left-1/2 transform -translate-x-1/2 rotate-[10deg] p-4 h-[300px] sm:h-[400px] md:h-[420px] lg:h-[450px] z-[30]"
+        class="absolute md:top-[15%] top-[10%] left-1/2 transform -translate-x-1/2 rotate-[10deg] p-4 h-[300px] sm:h-[400px] md:h-[400px] z-[30]"
         src="/wine-rotation.gif"
         alt="Rotating wine bottle"
       />
+    </div>
+
+    <!-- Scroll Down Icon -->
+    <div class="absolute bottom-[1%] w-full flex justify-center z-[30]">
+      <a href="#section1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="float w-8 h-8 sm:w-10 sm:h-10 text-neutral-50 hover:text-red-800 transition duration-300 ease-in-out"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+        </svg>
+      </a>
     </div>
 
     <section
       class="flex flex-col justify-center items-center md:grid md:grid-cols-12 gap-gap pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top"
     >
       <!-- Første sektion -->
-      <section
-        id="section1"
-        class="grid md:grid-cols-2 grid-cols-1 col-span-12 md:col-span-8 md:col-start-3 bg-neutral-800 max-w-7xl mx-auto md:p-0 p-8"
-      >
-        <img class="w-fit" src="/forsidebillede2.webp" alt="" />
-        <div class="p-8">
+      <section id="section1" class="grid md:grid-cols-2 grid-cols-1 col-span-10 md:col-start-2">
+        <img class="h-full w-fit" src="/forsidebillede2.webp" alt="" />
+        <div class="bg-neutral-800 max-w-7xl mx-auto md:p-12 p-8">
           <h2 class="text-h2-mobile font-display">Tag på en vinoplevelse</h2>
           <p class="pt-4 pb-6 w-[90%]">
             Hos Vinens Essens finder du et nøje udvalgt sortiment af vine, der rummer både overraskelser og velkendte favoritter. Som en del af vores
-            koncept tilbyder vi et månedligt abonnement, vi udvælger vine til dig – uden at afsløre, hvad du får, så hver levering føles som en
-            spændende overraskelse.
+            koncept tilbyder vi et månedligt abonnement, vi udvælger vine til dig&mdash; uden at afsløre, hvad du får, så hver levering føles som en
+            spændende overraskelse. Flere af vores vine kan endda kun nydes på udvalgte, eksklusive restauranter, hvor kvalitet og passion for vin går
+            hånd i hånd.
           </p>
         </div>
       </section>
 
       <!-- Infografik Section -->
-      <section
-        class="max-w-7xl mx-auto md:p-0 p-8 col-span-12 flex flex-wrap justify-center gap-8 py-12 pt-mobil-top md:pt-desktop-top pb-mobil-bottom md:pb-desktop-bottom"
-      >
+      <section class="max-w-7xl mx-auto md:p-0 p-8 col-span-12 flex flex-wrap justify-center gap-8 md:pt-desktop-top pt-mobil-top">
         <Infografik />
       </section>
 
       <!-- Eksklusive vine Section -->
-      <section
-        class="z-10 flex-shrink-0 col-span-10 flex justify-center items-center pb-mobil-bottom md:pb-desktop-bottom mobil-top md:pt-desktop-top"
-      >
+      <section class="z-10 flex-shrink-0 col-span-10 flex justify-center items-center">
         <!-- Wrapper for content -->
         <div class="relative flex items-center flex-col md:flex-row">
           <!-- Image Section -->
@@ -113,30 +112,30 @@ import Infografik from "../components/Infografik.astro";
 
       <!-- Anmeldelser Section -->
       <section class="max-w-7xl mx-auto md:p-0 p-8 col-span-12 py-12 pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top">
-        <h3 class="text-center font-display">ANMELDELSER</h3>
+        <h3 class="text-center font-display md:mt-0 mt-2">Anmeldelser</h3>
         <hr class="border-t-2 border-red-800 w-32 mx-auto mt-2" />
         <div class="flex md:flex-row flex-col justify-center gap-12 pt-20">
           <div class="text-center">
-            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.webp" alt="" />
+            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.svg" alt="" />
             <h3 class="text-h2-mobile font-display mt-4 pb-3">God vin</h3>
             <p>Fantastisk vin! Smagen er unik, og kvaliteten er altid i top.</p>
             <p class="text-neutral-300 mt-4">- Lærke Berge</p>
           </div>
           <div class="text-center">
-            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.webp" alt="" />
+            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.svg" alt="" />
             <h3 class="text-h2-mobile font-display mt-4 pb-3">Kan anbefales</h3>
             <p>En fornøjelse hver gang. Perfekt til både hverdag og særlige anledninger.</p>
             <p class="text-neutral-300 mt-4">- Mikkel Damsgaard</p>
           </div>
           <div class="text-center">
-            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.webp" alt="" />
+            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.svg" alt="" />
             <h3 class="text-h2-mobile font-display mt-4 pb-3">Vilde udvalg</h3>
             <p>Eksklusiv vin med en dybde, der gør enhver middag uforglemmelig.</p>
             <p class="text-neutral-300 mt-4">- Noah Carter</p>
           </div>
 
           <div class="text-center">
-            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.webp" alt="" />
+            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.svg" alt="" />
             <h3 class="text-h2-mobile font-display mt-4 pb-3">Professionelle</h3>
             <p>Service i verdensklasse&mdash; de gør alt for at sikre en god oplevelse.</p>
             <p class="text-neutral-300 mt-4">- Natasja Daglemør</p>
@@ -145,7 +144,7 @@ import Infografik from "../components/Infografik.astro";
       </section>
 
       <!-- Se mere Section -->
-      <section class="max-w-7xl mx-auto md:p-0 p-8 col-span-12 py-12 pt-mobil-top md:pt-desktop-top">
+      <section class="max-w-7xl mx-auto md:p-0 p-8 col-span-12 py-12">
         <div class="grid md:grid-cols-3 grid-cols-1 gap-gap">
           <img src="/seemore1.png" alt="" />
           <div class="bg-neutral-800 text-white py-12 px-20 flex flex-col justify-center">
