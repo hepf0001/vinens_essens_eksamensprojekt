@@ -25,7 +25,8 @@ import Button from "../components/Button.astro";
         </ul>
       </div>
     </nav>
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
+    <!-- Burger Menu -->
+    <button id="burgermenu" class="lg:hidden p-5" x-on:click="showmenu = !showmenu">
       <!-- Menu icon (Hamburger) -->
       <svg
         x-show="!showmenu"
@@ -34,7 +35,7 @@ import Button from "../components/Button.astro";
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="size-9 text-neutral-50 hover:text-red-800 transition duration-300 ease-in-out"
+        class="absolute right-4 top-9 transform -translate-y-1/2 h-9 w-9 text-neutral-50 hover:text-red-800 transition duration-300 ease-in-out"
       >
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"></path>
       </svg>
@@ -46,7 +47,7 @@ import Button from "../components/Button.astro";
         viewBox="0 0 24 24"
         stroke-width="2"
         stroke="currentColor"
-        class="size-9 text-neutral-50 hover:text-red-800 transition duration-300 ease-in-out"
+        class="absolute right-4 top-9 transform -translate-y-1/2 h-9 w-9 text-neutral-50 hover:text-red-800 transition duration-300 ease-in-out"
       >
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
@@ -60,18 +61,18 @@ import Button from "../components/Button.astro";
     x-on:click="showmenu = false"
     x-on:click.outside="showmenu = false"
   >
-    <ul class="space-y-2 some1">
+    <ul class="space-y-2">
       <!-- Adjust width for the whole menu -->
-      <li class="text-right border-b-2 border-neutral-50 py-6">
-        <a class="text-neutral-50" href="/">Hjem</a>
+      <li class="some1 text-right border-b-2 border-neutral-50 py-4 pt-12">
+        <a class="text-neutral-50 py-2 hover:opacity-70" href="/">Hjem</a>
       </li>
-      <li class="text-right border-b-2 border-neutral-50 py-6">
-        <a class="text-neutral-50" href="/om">Om os</a>
+      <li class="some1 text-right border-b-2 border-neutral-50 py-4">
+        <a class="text-neutral-50 py-2 hover:opacity-70" href="/om">Om os</a>
       </li>
-      <li class="text-right border-b-2 border-neutral-50 py-6">
-        <a class="text-neutral-50" href="/listeview">Vinkasser</a>
+      <li class="some1 text-right border-b-2 border-neutral-50 py-4">
+        <a class="text-neutral-50 py-2 hover:opacity-70" href="/listeview">Vinkasser</a>
       </li>
-      <li class="pt-6 text-right">
+      <li class="pt-12">
         <a href="/formular_vinkasse">
           <Button variant="primary" size="small">Bestil abonnement</Button>
         </a>
