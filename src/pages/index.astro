@@ -8,34 +8,6 @@ import Infografik from "../components/Infografik.astro";
 <!-- Start-sektion -->
 <MainLayout title="Forside - Vinens Essens">
   <div class="main-section">
-    <!-- Hero section for responsive design -->
-    <!-- <div class="relative w-full h-full"> -->
-    <!-- Background Image -->
-    <!-- <img class="w-full h-screen object-cover" src="/forsidebillede.webp" alt="Hero background" /> -->
-
-    <!-- Overlay -->
-    <!-- <div class="absolute inset-0 bg-neutral-950 bg-opacity-35 backdrop-blur-sm z-[20] h-screen"></div> -->
-
-    <!-- Main Heading -->
-    <!-- <div class="relative flex flex-col justify-center items-center z-[30] min-h-screen"> -->
-    <!-- Heading -->
-    <!-- <div class="flex justify-center items-center mb-4 md:mb-6">
-          <h1 class="text-[60px] md:text-[120px] text-neutral-50 px-4 md:px-6 font-display text-left leading-tight">VINENS ESSENS</h1>
-        </div> -->
-
-    <!-- Text section -->
-    <!-- <div class="flex justify-center mb-4 md:mb-6 w-full">
-          <p class="text-[16px] sm:text-[20px] font-regular text-neutral-50 text-left w-3/4 md:w-1/2">Nye smagsoplevelser hver måned&mdash; 3-6 håndplukkede, eksklusive vine</p>
-        </div> -->
-
-    <!-- CTA Button -->
-    <!-- <div class="flex justify-start max-w-7xl mx-auto">
-          <a href="/formular_vinkasse">
-            <Button variant="secondary" size="small">Bestil abonnement</Button>
-          </a>
-        </div> -->
-    <!-- </div> -->
-
     <div class="relative">
       <!-- Dark filter overlay-->
       <div class="absolute inset-0 bg-neutral-950 bg-opacity-35 backdrop-blur-sm z-[20] h-screen"></div>
@@ -45,21 +17,23 @@ import Infografik from "../components/Infografik.astro";
         <img class="w-full h-screen object-cover" src="/forsidebillede.webp" alt="Hero background" />
       </div>
       <!-- Tekst over img -->
-      <div class="absolute inset-0 flex items-center max-w-7xl mx-auto md:p-0 p-8">
-        <section class="grid lg:grid-cols-12 gap-5">
-          <div class="z-20 col-span-1 col-start-4">
-            <img class="w-full object-cover" src="/wine-rotation.gif" alt="Rødvin" />
-          </div>
-          <div class="z-20 col-span-5 pl-16">
+      <div class="absolute inset-0 flex justify-center items-center max-w-7xl mx-auto md:p-0 p-8">
+        <section class="grid lg:grid-cols-12">
+          <div class="z-20 col-span-7 md:pl-16 pl-0 md:pt-16 pt-0">
             <div>
-              <h1 class="md:text-[120px] text-[60px] font-display z-20">VINENS ESSENS</h1>
-              <h2 class="md:text-h4-desktop text-h4-mobile font-display font-bold z-20 pb-8">
+              <h1 class="md:text-[100px] text-[60px] z-20 pb-8">VINENS ESSENS</h1>
+              <h2 class="md:text-h4-desktop text-h4-mobile font-display font-regular z-20 pb-8">
                 Nye smagsoplevelser hver måned – 3 til 6 håndplukkede, eksklusive vine
               </h2>
-              <a href="/formular_vinkasse" class="z-20">
-                <Button variant="secondary" size="small">Bestil abonnement</Button>
-              </a>
+              <div class="flex justify-start">
+                <a href="/formular_vinkasse">
+                  <Button variant="secondary" size="small">Bestil abonnement</Button>
+                </a>
+              </div>
             </div>
+          </div>
+          <div class="absolute top-1/2 left-[80%] transform rotate-[10deg] -translate-x-1/2 -translate-y-1/2 z-20">
+            <img class="h-[500px] object-cover" src="/wine-rotation.gif" alt="Rødvin" />
           </div>
         </section>
       </div>
@@ -131,26 +105,26 @@ import Infografik from "../components/Infografik.astro";
         <h3 class="text-center font-display md:mt-0 mt-2">Anmeldelser</h3>
         <hr class="border-t-2 border-red-800 w-32 mx-auto mt-2" />
         <div class="flex md:flex-row flex-col justify-center gap-12 pt-20">
-          <div class="text-center">
+          <div class="text-center hover:scale-105 transition duration-300 ease-in-out">
             <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.svg" alt="" />
             <h3 class="text-h2-mobile font-display mt-4 pb-3">God vin</h3>
             <p>Fantastisk vin! Smagen er unik, og kvaliteten er altid i top.</p>
             <p class="text-neutral-300 mt-4">- Lærke Berge</p>
           </div>
-          <div class="text-center">
+          <div class="text-center hover:scale-105 transition duration-300 ease-in-out">
             <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.svg" alt="" />
             <h3 class="text-h2-mobile font-display mt-4 pb-3">Kan anbefales</h3>
             <p>En fornøjelse hver gang. Perfekt til både hverdag og særlige anledninger.</p>
             <p class="text-neutral-300 mt-4">- Mikkel Damsgaard</p>
           </div>
-          <div class="text-center">
+          <div class="text-center hover:scale-105 transition duration-300 ease-in-out">
             <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.svg" alt="" />
             <h3 class="text-h2-mobile font-display mt-4 pb-3">Vilde udvalg</h3>
             <p>Eksklusiv vin med en dybde, der gør enhver middag uforglemmelig.</p>
             <p class="text-neutral-300 mt-4">- Noah Carter</p>
           </div>
 
-          <div class="text-center">
+          <div class="text-center hover:scale-105 transition duration-300 ease-in-out">
             <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.svg" alt="" />
             <h3 class="text-h2-mobile font-display mt-4 pb-3">Professionelle</h3>
             <p>Service i verdensklasse&mdash; de gør alt for at sikre en god oplevelse.</p>
@@ -160,10 +134,10 @@ import Infografik from "../components/Infografik.astro";
       </section>
 
       <!-- Se mere Section -->
-      <section class="max-w-7xl mx-auto md:p-0 p-8 col-span-12 py-12">
+      <section class="mangeelementerinview max-w-7xl mx-auto md:p-0 p-8 col-span-12 py-12">
         <div class="grid md:grid-cols-3 grid-cols-1 gap-gap">
-          <img src="/seemore1.png" alt="" />
-          <div class="bg-neutral-800 text-white py-12 px-20 flex flex-col justify-center">
+          <img class="mangeelementer1" src="/seemore1.png" alt="" />
+          <div class="mangeelementer2 bg-neutral-800 text-white py-12 px-20 flex flex-col justify-center">
             <h3 class="font-display text-center pb-3">Se nærmere på vores udvalg af vinkasser</h3>
             <div class="flex justify-center">
               <a href="/listeview" class="inline-block mt-6">
@@ -171,7 +145,7 @@ import Infografik from "../components/Infografik.astro";
               </a>
             </div>
           </div>
-          <img src="/seemore2.png" alt="Se mere billede" />
+          <img class="mangeelementer3" src="/seemore2.png" alt="Se mere billede" />
         </div>
         <div class="flex justify-center">
           <hr class="my-12 border-t-2 border-red-800 w-28" />
@@ -205,5 +179,27 @@ import Infografik from "../components/Infografik.astro";
         scroll-behavior: smooth;
       }
     </style>
+
+    <script>
+      import { inView, animate } from "motion";
+      /* inView Animation */
+      const elementmedanimation1 = document.querySelector("#section1");
+      inView(elementmedanimation1, () => {
+        elementmedanimation1.classList.add("animate__animated", "animate__fadeInDown");
+      });
+
+      /* Mange elementer der animerer ind */
+      inView(".mangeelementerinview", () => {
+        animate(".mangeelementer1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+        animate(".mangeelementer2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+        animate(".mangeelementer3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+
+        return () => {
+          animate(".mangeelementer1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+          animate(".mangeelementer2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+          animate(".mangeelementer3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+        };
+      });
+    </script>
   </div>
 </MainLayout>
