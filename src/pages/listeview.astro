@@ -64,22 +64,42 @@ const cards = [
 
 <MainLayout title="Vinkasser">
   <div class="relative flex justify-center items-center">
-    <img src="/hero_listview.webp" alt="Image of four glasses containing red, white and rose wine, with bread and cheese on the table" class="w-full h-[500px] object-cover" />
+    <img
+      src="/hero_listview.webp"
+      alt="Image of four glasses containing red, white and rose wine, with bread and cheese on the table"
+      class="w-full h-[500px] object-cover"
+    />
     <!-- Dark overlay -->
     <div class="h-full absolute inset-0 bg-neutral-950 bg-opacity-35 z-[20]"></div>
   </div>
-  <div class="md:pl-0 pb-7 md:pb-0 pl-[7%] relative max-w-7xl mx-auto">
+  <div class="md:pl-0 pb-7 md:pb-0 pl-[7%] relative max-w-7xl mx-auto z-[30]">
     <div id="Left-overskrift">
-      <div class="absolute top-[clamp(40vh, 50vh, 60vh)] w-[fit-content] transform -translate-y-1/2 z-[30] overflow-hidden">
+      <div class="absolute top-[clamp(40vh, 50vh, 60vh)] w-[fit-content] transform -translate-y-1/2 overflow-hidden">
         <h1 class="display text-neutral-50 w-[fit-content]">VIN&shy;KASSER</h1>
       </div>
     </div>
   </div>
 
   <section class="max-w-7xl mx-auto md:p-0 p-8">
-    <section class="flex flex-col justify-center items-center md:grid md:grid-cols-12 gap-gap pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top">
+    <section
+      class="flex flex-col justify-center items-center md:grid md:grid-cols-12 gap-gap pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top"
+    >
       {/* Map over the cards */}
-      {cards.map((card) => <ListeviewCard key={card.position} image={card.image} label={card.label} extralabel={card.position === 1 ? card.extralabel : null} title={card.title} description={card.description} price={card.price} second_description={card.second_description} buttonText={card.buttonText} />)}
+      {
+        cards.map((card) => (
+          <ListeviewCard
+            key={card.position}
+            image={card.image}
+            label={card.label}
+            extralabel={card.position === 1 ? card.extralabel : null}
+            title={card.title}
+            description={card.description}
+            price={card.price}
+            second_description={card.second_description}
+            buttonText={card.buttonText}
+          />
+        ))
+      }
     </section>
   </section>
 
