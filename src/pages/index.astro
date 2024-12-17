@@ -13,14 +13,7 @@ import Infografik from "../components/Infografik.astro";
       <div class="absolute inset-0 bg-neutral-950 bg-opacity-35 backdrop-blur-sm z-10"></div>
 
       <!-- Background Image -->
-      <img
-        class="w-full h-screen object-cover"
-        src="/forsidebillede.webp"
-        srcset="/forsidebillede-small.webp 480w, /forsidebillede.webp 1920w"
-        sizes="(max-width: 768px) 100vw, 50vw"
-        alt="Hero background"
-        loading="lazy"
-      />
+      <img class="w-full h-screen object-cover" src="/forsidebillede.webp" alt="Baggrundsbillede af en vinkælder" loading="lazy" />
 
       <!-- Content -->
       <div class="absolute inset-0 flex justify-center items-center container mx-auto px-8 text-white z-20">
@@ -60,11 +53,16 @@ import Infografik from "../components/Infografik.astro";
       class="flex flex-col justify-center items-center md:grid md:grid-cols-12 gap-gap pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top"
     >
       <!-- Første sektion -->
-      <section id="section1" class="grid md:grid-cols-2 grid-cols-1 col-span-10 md:col-start-2">
-        <img class="h-full w-fit" src="/forsidebillede2.webp" alt="" />
+      <section id="section1" class="md:p-0 p-8 grid md:grid-cols-2 grid-cols-1 col-span-10 md:col-start-2">
+        <!-- Responsive Image -->
+        <div class="w-full h-64 md:h-auto">
+          <img class="w-full h-full object-cover" src="/forsidebillede2.webp" alt="Vin oplevelse" />
+        </div>
+
+        <!-- Content -->
         <div class="bg-neutral-800 max-w-7xl mx-auto md:p-12 p-8">
           <h2 class="text-h2-mobile font-display">Tag på en vinoplevelse</h2>
-          <p class="pt-4 pb-6 w-[90%]">
+          <p class="pt-4 pb-6">
             Hos Vinens Essens finder du et nøje udvalgt sortiment af vine, der rummer både overraskelser og velkendte favoritter. Som en del af vores
             koncept tilbyder vi et månedligt abonnement, vi udvælger vine til dig&mdash; uden at afsløre, hvad du får, så hver levering føles som en
             spændende overraskelse. Flere af vores vine kan endda kun nydes på udvalgte, eksklusive restauranter, hvor kvalitet og passion for vin går
@@ -84,7 +82,7 @@ import Infografik from "../components/Infografik.astro";
         <div class="relative flex items-center flex-col md:flex-row">
           <!-- Image Section -->
           <div id="imageSection" class="flex-shrink-0 pl-0 md:pl-8 z-[30]">
-            <img class="max-w-[200px] drop-shadow-xl" src="/twowinebottles.webp" alt="Two wine bottles" />
+            <img class="max-w-[200px] drop-shadow-xl" src="/twowinebottles.webp" alt="To vin-flasker ved siden af hinanden" loading="lazy" />
           </div>
 
           <!-- Red Box (Background) -->
@@ -113,26 +111,26 @@ import Infografik from "../components/Infografik.astro";
         <hr class="border-t-2 border-red-800 w-32 mx-auto mt-2" />
         <div class="flex md:flex-row flex-col justify-center gap-12 pt-20">
           <div class="text-center hover:scale-105 transition duration-300 ease-in-out">
-            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner2.svg" alt="" />
+            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner2.svg" alt="Anmeldelsestjerner - fuldt antal" loading="lazy" />
             <h3 class="text-h2-mobile font-display mt-4 pb-3">God vin</h3>
             <p>Fantastisk vin! Smagen er unik, og kvaliteten er altid i top.</p>
             <p class="text-neutral-300 mt-4">- Lærke Berge</p>
           </div>
           <div class="text-center hover:scale-105 transition duration-300 ease-in-out">
-            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner3.svg" alt="" />
+            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner3.svg" alt="Anmeldelsestjerner - 1 ud af 5 udfyldt" loading="lazy" />
             <h3 class="text-h2-mobile font-display mt-4 pb-3">Kan anbefales</h3>
             <p>En fornøjelse hver gang. Perfekt til både hverdag og særlige anledninger.</p>
             <p class="text-neutral-300 mt-4">- Mikkel Damsgaard</p>
           </div>
           <div class="text-center hover:scale-105 transition duration-300 ease-in-out">
-            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner2.svg" alt="" />
+            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner2.svg" alt="Anmeldelsestjerner - fuldt antal" loading="lazy" />
             <h3 class="text-h2-mobile font-display mt-4 pb-3">Vilde udvalg</h3>
             <p>Eksklusiv vin med en dybde, der gør enhver middag uforglemmelig.</p>
             <p class="text-neutral-300 mt-4">- Noah Carter</p>
           </div>
 
           <div class="text-center hover:scale-105 transition duration-300 ease-in-out">
-            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.svg" alt="" />
+            <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.svg" alt="Anmeldelsestjerner - 4,5 ud af 5 udfyldt" loading="lazy" />
             <h3 class="text-h2-mobile font-display mt-4 pb-3">Professionelle</h3>
             <p>Service i verdensklasse&mdash; de gør alt for at sikre en god oplevelse.</p>
             <p class="text-neutral-300 mt-4">- Natasja Daglemør</p>
@@ -143,7 +141,7 @@ import Infografik from "../components/Infografik.astro";
       <!-- Se mere Section -->
       <section class="mangeelementerinview max-w-7xl mx-auto md:p-0 p-8 col-span-12 py-12">
         <div class="grid md:grid-cols-3 grid-cols-1 gap-gap">
-          <img class="mangeelementer1" src="/seemore1.png" alt="" />
+          <img class="mangeelementer1" src="/seemore1.png" alt="Adskillige vinflasker på række, placeret på en reol" loading="lazy" />
           <div class="mangeelementer2 bg-neutral-800 text-white py-12 px-20 flex flex-col justify-center">
             <h3 class="font-display text-center pb-3">Se nærmere på vores udvalg af vinkasser</h3>
             <div class="flex justify-center">
@@ -152,7 +150,7 @@ import Infografik from "../components/Infografik.astro";
               </a>
             </div>
           </div>
-          <img class="mangeelementer3" src="/seemore2.png" alt="Se mere billede" />
+          <img class="mangeelementer3" src="/seemore2.png" alt="En vinflaske ligget lænt op ad et lille stykke træ" loading="lazy" />
         </div>
         <div class="flex justify-center">
           <hr class="my-12 border-t-2 border-red-800 w-28" />
