@@ -76,18 +76,18 @@ import Infografik from "../components/Infografik.astro";
         <!-- Wrapper for content -->
         <div class="relative flex items-center flex-col md:flex-row">
           <!-- Image Section -->
-          <div id="imageSection" class="z-10 flex-shrink-0 pl-0 md:pl-8">
+          <div id="imageSection" class="flex-shrink-0 pl-0 md:pl-8 z-[30]">
             <img class="max-w-[200px] drop-shadow-xl" src="/twowinebottles.webp" alt="Two wine bottles" />
           </div>
 
           <!-- Red Box (Background) -->
           <div
-            class="absolute z-0 bg-red-800 w-[100%] md:h-[300px] h-[400px] top-[78%] left-[50%] md:top-1/2 md:left-1/2 -translate-x-1/2 -translate-y-1/2 clip-path-custom"
+            class="redBox absolute z-0 bg-red-800 w-[100%] md:h-[300px] h-[400px] top-[53%] left-[0%] md:top-[20%] md:left-0 -translate-x-1/2 -translate-y-1/2 clip-path-custom"
           >
           </div>
 
           <!-- Text Section -->
-          <div class="redBox text-center md:text-left md:p-0 relative z-10 bg-transparent text-white px-16 md:py-12 md:px-20">
+          <div class="redBoxText text-center md:text-left md:p-0 relative z-10 bg-transparent text-white px-16 md:py-12 md:px-20">
             <h3 class="mt-8 md:mt-0 font-display">Eksklusive vine</h3>
             <p class="mt-4 leading-relaxed">
               Vinens Essens tilbyder nøje udvalgte vine, der kombinerer høj kvalitet og unikke smagsoplevelser. Flere af vores vine findes kun i
@@ -191,6 +191,11 @@ import Infografik from "../components/Infografik.astro";
       const elementmedanimation2 = document.querySelector(".redBox");
       inView(elementmedanimation2, () => {
         elementmedanimation2.classList.add("animate__animated", "animate__slideInLeft");
+      });
+
+      const elementmedanimation4 = document.querySelector(".redBoxText");
+      inView(elementmedanimation4, () => {
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeInLeft");
       });
 
       const elementmedanimation3 = document.querySelector("#imageSection");
