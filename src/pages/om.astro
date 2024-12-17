@@ -4,21 +4,19 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Om os">
   <div class="relative flex justify-center items-center">
-    <img
-      src="/hero_about.webp"
-      alt="Image of a three glasses of white wine, being held closely by three people cheering"
-      class="w-full h-[500px] object-cover"
-    />
+    <img src="/hero_about.webp" alt="Image of a three glasses of white wine, being held closely by three people cheering" class="w-full h-[500px] object-cover" />
     <!-- Dark overlay -->
     <div class="md:h-full absolute inset-0 bg-neutral-950 bg-opacity-35 z-[20]"></div>
   </div>
   <div class="md:pl-0 pl-[7%] relative max-w-7xl mx-auto">
-    <div class="absolute top-[clamp(40vh, 50vh, 60vh)] w-[fit-content] transform -translate-y-1/2 z-[30] overflow-hidden">
-      <h1 class="display text-neutral-50 w-[fit-content]">OM OS</h1>
+    <div id="Left-overskrift">
+      <div class="absolute top-[clamp(40vh, 50vh, 60vh)] w-[fit-content] transform -translate-y-1/2 z-[30] overflow-hidden">
+        <h1 class="display text-neutral-50 w-[fit-content]">OM OS</h1>
+      </div>
     </div>
   </div>
   <section class="max-w-7xl mx-auto md:p-0 p-8">
-    <div class="grid md:grid-cols-12 md:gap-28 gap-12 pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top items-center">
+    <div id="Left" class="grid md:grid-cols-12 md:gap-28 gap-12 pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top items-center">
       <!-- Image section -->
       <div class="md:col-span-5 flex justify-start">
         <img src="/about1.webp" alt="Image of a glass getting white wine poured from a bottle" class="w-[450px] h-[450px] object-cover" />
@@ -28,40 +26,30 @@ import MainLayout from "../layouts/MainLayout.astro";
         <h2>Hvem er vi?</h2>
         <hr class="my-4 border-t-2 border-red-800 w-28" />
         <p class="mt-8">
-          Vi er et passioneret ægtepar, forenet af vores fælles kærlighed til vin og de oplevelser, der følger med. Vores rejse begyndte for mange år
-          siden, hvor nysgerrighed og fascination drev os til at udforske vinens verden&mdash; fra små, familieejede vingårde til store, anerkendte
-          vinproducenter. Gennem årene har vi haft fornøjelsen af at besøge vingårde i alt fra de solrige bakker i Toscana til de kølige, elegante
-          vinmarker i Bourgogne. Disse oplevelser har ikke bare skærpet vores viden, men også givet os en dybere forståelse for den passion og
-          dedikation, der ligger bag hver flaske.
+          Vi er et passioneret ægtepar, forenet af vores fælles kærlighed til vin og de oplevelser, der følger med. Vores rejse begyndte for mange år siden, hvor nysgerrighed og fascination drev os til at udforske vinens verden&mdash; fra små, familieejede vingårde til store, anerkendte vinproducenter. Gennem årene har vi haft fornøjelsen af at
+          besøge vingårde i alt fra de solrige bakker i Toscana til de kølige, elegante vinmarker i Bourgogne. Disse oplevelser har ikke bare skærpet vores viden, men også givet os en dybere forståelse for den passion og dedikation, der ligger bag hver flaske.
           <br /><br />
-          Når vi udvælger vin til vores sortiment, er vi altid på udkig efter vine, der fortæller en historie. Kvalitet og smag er naturligvis afgørende,
-          men vi leder også efter vine, der rummer noget unikt&mdash; måske en særlig drue, en anderledes produktionsmetode eller en forbindelse til en
-          tradition, vi ønsker at dele. Vi smager hver eneste vin personligt og vurderer den ud fra kriterier som balance, kompleksitet og dens evne til
-          at skabe en mindeværdig oplevelse.
+          Når vi udvælger vin til vores sortiment, er vi altid på udkig efter vine, der fortæller en historie. Kvalitet og smag er naturligvis afgørende, men vi leder også efter vine, der rummer noget unikt&mdash; måske en særlig drue, en anderledes produktionsmetode eller en forbindelse til en tradition, vi ønsker at dele. Vi smager hver eneste vin
+          personligt og vurderer den ud fra kriterier som balance, kompleksitet og dens evne til at skabe en mindeværdig oplevelse.
           <br /><br />
-          For os handler det ikke bare om vin, men om at skabe forbindelser. Forbindelser mellem vinens oprindelse og din oplevelse af den. Det er vores
-          mission at bringe det bedste fra vinens verden hjem til dig&mdash; nøje udvalgt med hjertet og med tanke på at gøre vin tilgængelig, imødekommende
-          og elegant.
+          For os handler det ikke bare om vin, men om at skabe forbindelser. Forbindelser mellem vinens oprindelse og din oplevelse af den. Det er vores mission at bringe det bedste fra vinens verden hjem til dig&mdash; nøje udvalgt med hjertet og med tanke på at gøre vin tilgængelig, imødekommende og elegant.
         </p>
       </div>
     </div>
-    <div class="grid md:grid-cols-12 md:gap-28 gap-12 pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top items-center">
+    <div id="Right" class="grid md:grid-cols-12 md:gap-28 gap-12 pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top items-center">
       <!-- Text section -->
       <div class="md:col-span-6">
         <h2>Overraskelse <br class="hidden md:block" />hver måned</h2>
         <hr class="my-4 border-t-2 border-red-800 w-28" />
         <p class="mt-8">
-          Vi ønsker at dele vores passion for vin på en måde, der både overrasker og inspirerer. Hver måned sammensætter vi en unik smagsoplevelse,
-          hvor vores viden og erfaring kommer til udtryk. Med samme omhu, som vi udvælger vores sortiment, finder vi flasker, der enten fortæller en
-          historie, introducerer nye smagsnuancer eller fremhæver særlige traditioner fra vinens verden.
+          Vi ønsker at dele vores passion for vin på en måde, der både overrasker og inspirerer. Hver måned sammensætter vi en unik smagsoplevelse, hvor vores viden og erfaring kommer til udtryk. Med samme omhu, som vi udvælger vores sortiment, finder vi flasker, der enten fortæller en historie, introducerer nye smagsnuancer eller fremhæver særlige
+          traditioner fra vinens verden.
           <br /><br />
-          Hver overraskelse er nøje udvalgt for at give dig noget særligt&mdash; måske en vin fra en mindre, familieejet vingård, vi selv har besøgt, eller
-          en flaske med en spændende baggrundshistorie, der tilføjer et ekstra lag til oplevelsen. Vi stræber efter at skabe en perfekt balance mellem
-          kendte klassikere og uventede favoritter, så du altid har noget nyt at glæde dig til.
+          Hver overraskelse er nøje udvalgt for at give dig noget særligt&mdash; måske en vin fra en mindre, familieejet vingård, vi selv har besøgt, eller en flaske med en spændende baggrundshistorie, der tilføjer et ekstra lag til oplevelsen. Vi stræber efter at skabe en perfekt balance mellem kendte klassikere og uventede favoritter, så du altid
+          har noget nyt at glæde dig til.
           <br /><br />
-          Denne månedlige overraskelse er skabt til dig, der ønsker at udforske og blive inspireret, uden at det føles kompliceret. Det er vores måde at
-          bringe vinens mangfoldighed hjem til dig&mdash; en elegant og personlig gave, der kan nydes alene eller deles med dem, du holder af. For os handler
-          det om mere end vin&mdash; det handler om at dele glæden ved gode smagsoplevelser.
+          Denne månedlige overraskelse er skabt til dig, der ønsker at udforske og blive inspireret, uden at det føles kompliceret. Det er vores måde at bringe vinens mangfoldighed hjem til dig&mdash; en elegant og personlig gave, der kan nydes alene eller deles med dem, du holder af. For os handler det om mere end vin&mdash; det handler om at dele
+          glæden ved gode smagsoplevelser.
         </p>
       </div>
       <!-- Image section -->
@@ -69,39 +57,72 @@ import MainLayout from "../layouts/MainLayout.astro";
         <img src="/about2.webp" alt="Image of two different glasses of wine" class="w-[450px] h-[450px] object-cover" />
       </div>
     </div>
+
     <div class="max-w-7xl pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top">
       <!-- Mission & Vision Section -->
-      <div class="grid md:grid-cols-2 grid-cols-1 justify-center">
-        <div class="bg-neutral-800 text-neutral-50 p-8 order-1 md:order-none">
-          <h3 class="mb-4">Mission & vision</h3>
-          <p>
-            Hos Vinens Essens ønsker vi at gøre vin til en personlig og uforglemmelig oplevelse. Vi tilbyder vine af høj kvalitet, der vækker
-            nysgerrighed og glæde, samtidig med at vi holder det enkelt og tilgængeligt. Vores vision er at skabe en vinoplevelse, som kan nydes af
-            alle, uanset viden eller erfaring, og at gøre vin mere tilgængeligt uden at gå på kompromis med elegance og kvalitet.
-          </p>
+      <div class="sticky top-1/4 mangeelementerinview">
+        <div class="grid md:grid-cols-2 grid-cols-1 justify-center">
+          <div class="mangeelementer1 bg-neutral-800 text-neutral-50 p-8 order-1 md:order-none">
+            <h3 class="mb-4">Mission & vision</h3>
+            <p>
+              Hos Vinens Essens ønsker vi at gøre vin til en personlig og uforglemmelig oplevelse. Vi tilbyder vine af høj kvalitet, der vækker nysgerrighed og glæde, samtidig med at vi holder det enkelt og tilgængeligt. Vores vision er at skabe en vinoplevelse, som kan nydes af alle, uanset viden eller erfaring, og at gøre vin mere tilgængeligt
+              uden at gå på kompromis med elegance og kvalitet.
+            </p>
+          </div>
+          <div class="order-2 md:order-none mangeelementer2">
+            <img src="/values1.webp" alt="Image of wine fields" class="w-full h-[280px] object-cover" />
+          </div>
         </div>
-        <div class="order-2 md:order-none">
-          <img src="/values1.webp" alt="Image of wine fields" class="w-full h-[350px] object-cover" />
-        </div>
-      </div>
 
-      <!-- Values Section -->
-      <div class="grid md:grid-cols-2 grid-cols-1">
-        <div class="order-2 md:order-1">
-          <img src="/values2.webp" alt="Image of a wine cellar, with rows of different wines" class="w-full h-[350px] object-cover" />
+        <!-- Values Section -->
+        <div class="grid md:grid-cols-2 grid-cols-1">
+          <div class="order-2 md:order-1 mangeelementer3">
+            <img src="/values2.webp" alt="Image of a wine cellar, with rows of different wines" class="w-full h-[280px] object-cover" />
+          </div>
+          <div class="bg-neutral-800 text-neutral-50 p-8 order-1 md:order-2 mangeelementer4">
+            <h3 class="mb-4">Værdier</h3>
+            <p>Vi brænder for vin og deler gerne vores glæde med vores kunder. Hver flaske vi udvælger, lever op til vores høje standarder for kvalitet og smag. Vi stræber efter at give en personlig og imødekommende service, hvor elegance og eksklusivitet kombineres med enkelhed og tilgængelighed, så alle kan nyde vinens mange nuancer.</p>
+          </div>
         </div>
-        <div class="bg-neutral-800 text-neutral-50 p-8 order-1 md:order-2">
-          <h3 class="mb-4">Værdier</h3>
-          <p>
-            Vi brænder for vin og deler gerne vores glæde med vores kunder. Hver flaske vi udvælger, lever op til vores høje standarder for kvalitet
-            og smag. Vi stræber efter at give en personlig og imødekommende service, hvor elegance og eksklusivitet kombineres med enkelhed og
-            tilgængelighed, så alle kan nyde vinens mange nuancer.
-          </p>
+        <div class="flex justify-center">
+          <hr class="my-12 border-t-2 border-red-800 w-28" />
         </div>
-      </div>
-      <div class="flex justify-center">
-        <hr class="my-12 border-t-2 border-red-800 w-28" />
       </div>
     </div>
   </section>
+
+  <script>
+    import { inView, animate } from "motion";
+
+    /* Mange elementer der animerer ind */
+    inView(".mangeelementerinview", () => {
+      animate(".mangeelementer1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+      animate(".mangeelementer2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+      animate(".mangeelementer3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+      animate(".mangeelementer4", { x: [1750, 0] }, { duration: 2 });
+
+      return () => {
+        animate(".mangeelementer1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+        animate(".mangeelementer2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+        animate(".mangeelementer3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+        animate(".mangeelementer4", { x: [1750, 0] }, { duration: 2 });
+      };
+    });
+
+    /* inView Animations */
+    const elementmedanimation1 = document.querySelector("#Left");
+    inView(elementmedanimation1, () => {
+      elementmedanimation1.classList.add("animate__animated", "animate__fadeInLeft");
+    });
+
+    const elementmedanimation2 = document.querySelector("#Left-overskrift");
+    inView(elementmedanimation2, () => {
+      elementmedanimation2.classList.add("animate__animated", "animate__fadeInLeft");
+    });
+
+    const elementmedanimation3 = document.querySelector("#Right");
+    inView(elementmedanimation3, () => {
+      elementmedanimation3.classList.add("animate__animated", "animate__fadeInRight");
+    });
+  </script>
 </MainLayout>
