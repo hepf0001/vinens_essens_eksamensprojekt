@@ -76,7 +76,7 @@ import Infografik from "../components/Infografik.astro";
         <!-- Wrapper for content -->
         <div class="relative flex items-center flex-col md:flex-row">
           <!-- Image Section -->
-          <div class="z-10 flex-shrink-0 pl-0 md:pl-8">
+          <div id="imageSection" class="z-10 flex-shrink-0 pl-0 md:pl-8">
             <img class="max-w-[200px] drop-shadow-xl" src="/twowinebottles.webp" alt="Two wine bottles" />
           </div>
 
@@ -87,7 +87,7 @@ import Infografik from "../components/Infografik.astro";
           </div>
 
           <!-- Text Section -->
-          <div class="md:p-0 relative z-10 bg-transparent text-white px-16 md:py-12 md:px-20">
+          <div class="redBox text-center md:text-left md:p-0 relative z-10 bg-transparent text-white px-16 md:py-12 md:px-20">
             <h3 class="mt-8 md:mt-0 font-display">Eksklusive vine</h3>
             <p class="mt-4 leading-relaxed">
               Vinens Essens tilbyder nøje udvalgte vine, der kombinerer høj kvalitet og unikke smagsoplevelser. Flere af vores vine findes kun i
@@ -186,6 +186,16 @@ import Infografik from "../components/Infografik.astro";
       const elementmedanimation1 = document.querySelector("#section1");
       inView(elementmedanimation1, () => {
         elementmedanimation1.classList.add("animate__animated", "animate__fadeInDown");
+      });
+
+      const elementmedanimation2 = document.querySelector(".redBox");
+      inView(elementmedanimation2, () => {
+        elementmedanimation2.classList.add("animate__animated", "animate__slideInLeft");
+      });
+
+      const elementmedanimation3 = document.querySelector("#imageSection");
+      inView(elementmedanimation3, () => {
+        elementmedanimation3.classList.add("animate__animated", "animate__slideInRight");
       });
 
       /* Mange elementer der animerer ind */
