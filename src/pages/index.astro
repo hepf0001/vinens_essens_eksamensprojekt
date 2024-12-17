@@ -14,52 +14,45 @@ import Infografik from "../components/Infografik.astro";
       <img class="w-full h-screen object-cover" src="/forsidebillede.webp" alt="Hero background" />
 
       <!-- Overlay -->
-      <div class="absolute inset-0 bg-neutral-950 bg-opacity-35 backdrop-blur-sm z-[20]"></div>
+      <div class="absolute inset-0 bg-neutral-950 bg-opacity-35 backdrop-blur-sm z-[20] h-screen"></div>
 
       <!-- Main Heading -->
-      <div class="absolute inset-0 flex justify-center items-center z-[30] -bottom-[15%] md:bottom-[10%] text-center">
-        <h1 class="text-[60px] md:text-[120px] text-neutral-50 px-4 md:px-6 font-display text-center leading-tight">
-          VINENS <span class="block sm:inline px-4 md:px-16"></span> ESSENS
-        </h1>
+      <div class="relative flex flex-col justify-center items-center z-[30] min-h-screen">
+        <!-- Heading -->
+        <div class="flex justify-center items-center mb-4 md:mb-6">
+          <h1 class="text-[60px] md:text-[120px] text-neutral-50 px-4 md:px-6 font-display text-left leading-tight">VINENS ESSENS</h1>
+        </div>
+
+        <!-- Text section -->
+        <div class="flex justify-center mb-4 md:mb-6 w-full">
+          <p class="text-[16px] sm:text-[20px] font-regular text-neutral-50 text-left w-3/4 md:w-1/2">
+            Nye smagsoplevelser hver måned&mdash; 3-6 håndplukkede, eksklusive vine
+          </p>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="flex justify-start max-w-7xl mx-auto">
+          <a href="/formular_vinkasse">
+            <Button variant="secondary" size="small">Bestil abonnement</Button>
+          </a>
+        </div>
       </div>
 
-      <!-- Rotating Wine Image -->
-      <img
-        class="absolute md:top-[18%] top-[11%] left-1/2 transform -translate-x-1/2 rotate-[10deg] p-4 h-[300px] sm:h-[400px] md:h-[400px] z-[30]"
-        src="/wine-rotation.gif"
-        alt="Rotating wine bottle"
-      />
-    </div>
-
-    <!-- Text section -->
-    <div class="absolute bottom-[23%] md:bottom-[24%] w-full flex justify-center z-[30]">
-      <p class="text-[16px] sm:text-[20px] font-regular text-neutral-50 text-center w-3/4 md:w-1/2">
-        Modtag tre til seks eksklusive vine hver måned&mdash; nøje udvalgt for at give dig nye, spændende smagsoplevelser. En månedlig overraskelse,
-        der bringer vinens verden til dig.
-      </p>
-    </div>
-
-    <!-- CTA Button -->
-    <div class="absolute bottom-[13%] md:bottom-[14%] w-full flex justify-center z-[30]">
-      <a href="/formular_vinkasse">
-        <Button variant="secondary" size="small">Bestil abonnement</Button>
-      </a>
-    </div>
-
-    <!-- Scroll Down Icon -->
-    <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
-      <a href="#section1">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="float w-8 h-8 sm:w-10 sm:h-10 text-neutral-50 hover:text-red-800 transition duration-300 ease-in-out"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
-        </svg>
-      </a>
+      <!-- Scroll Down Icon -->
+      <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
+        <a href="#section1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="float w-8 h-8 sm:w-10 sm:h-10 text-neutral-50 hover:text-red-800 transition duration-300 ease-in-out"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+          </svg>
+        </a>
+      </div>
     </div>
 
     <section
