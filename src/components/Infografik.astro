@@ -2,7 +2,7 @@
 
 ---
 
-<div class="sticky top-1/4 mangeelementerinview">
+<div class="mangeelementerinview">
     <section class="grid md:grid-cols-12 gap-gap md:pb-desktop-bottom pb-mobil-bottom">
         <!-- Step 1 -->
         <section class="mangeelementer1 col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
@@ -42,21 +42,42 @@
     </section>
 </div>
 
+<style>
+    .delay-1 {
+        animation-delay: 0.5s;
+    }
+    .delay-2 {
+        animation-delay: 1s;
+    }
+    .delay-3 {
+        animation-delay: 1.5s;
+    }
+    .delay-4 {
+        animation-delay: 2s;
+    }
+</style>
+
 <script>
-    import { inView, animate } from "motion";
+    import { inView } from "motion";
 
-    /* Mange elementer der animerer ind */
-    inView(".mangeelementerinview", () => {
-        animate(".mangeelementer1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
-        animate(".mangeelementer2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
-        animate(".mangeelementer3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
-        animate(".mangeelementer4", { x: [1750, 0] }, { duration: 2 });
+    /* inView Animations */
+    const elementmedanimation1 = document.querySelector(".mangeelementer1");
+    inView(elementmedanimation1, () => {
+        elementmedanimation1.classList.add("animate__animated", "animate__fadeIn", "delay-1");
+    });
 
-        return () => {
-            animate(".mangeelementer1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
-            animate(".mangeelementer2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
-            animate(".mangeelementer3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
-            animate(".mangeelementer4", { x: [1750, 0] }, { duration: 2 });
-        };
+    const elementmedanimation2 = document.querySelector(".mangeelementer2");
+    inView(elementmedanimation2, () => {
+        elementmedanimation2.classList.add("animate__animated", "animate__fadeIn", "delay-2");
+    });
+
+    const elementmedanimation3 = document.querySelector(".mangeelementer3");
+    inView(elementmedanimation3, () => {
+        elementmedanimation3.classList.add("animate__animated", "animate__fadeIn", "delay-3");
+    });
+
+    const elementmedanimation4 = document.querySelector(".mangeelementer4");
+    inView(elementmedanimation4, () => {
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeIn", "delay-4");
     });
 </script>
