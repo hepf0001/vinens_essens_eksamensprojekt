@@ -13,14 +13,22 @@ const schemamarkup = {
   description: "En månedlig vinkasse, hvor du kan opleve nøje udvalgte vine fra nogle af verdens mest anerkendte vinområder.",
   brand: "Vinens Essens",
   sku: "12345",
-  offers: {
-    "@type": "Offer",
-    url: "https://vinens-essens.netlify.app/",
-    priceCurrency: "DKK",
-    price: "Price_of_subscription",
-    itemCondition: "https://schema.org/NewCondition",
-    availability: "https://schema.org/InStock",
-  },
+  offers: [
+    {
+      "@type": "Offer",
+      url: "https://vinens-essens.netlify.app/",
+      priceCurrency: "DKK",
+      price: "699",
+      availability: "https://schema.org/InStock",
+    },
+    {
+      "@type": "Offer",
+      url: "https://vinens-essens.netlify.app/",
+      priceCurrency: "DKK",
+      price: "349",
+      availability: "https://schema.org/InStock",
+    },
+  ],
 };
 ---
 
