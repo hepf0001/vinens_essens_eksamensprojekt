@@ -89,9 +89,9 @@ red: {
       extend: {
         spacing: {
             "gap": "25px",
-            "mobil-bottom": "60px",
+            "mobil-bottom": "85px",
             "desktop-bottom": "120px",
-            "mobil-top": "60px",
+            "mobil-top": "85px",
             "desktop-top": "120px",
           },
 
